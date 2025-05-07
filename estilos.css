@@ -1,10 +1,10 @@
 /* estilos.css */
 
 :root {
-    --color-principal: #4A90E2;
-    --color-fondo: #f9f9f9;
-    --color-texto: #333;
-    --color-claro: #ffffff;
+    --color-principal: #df0000;
+    --color-fondo: #000000;
+    --color-texto: #fcfcfc;
+    --color-claro: #5a5a5a;
     --color-sombra: rgba(0, 0, 0, 0.05);
   }
   
@@ -23,7 +23,7 @@
   
   header {
     background-color: var(--color-principal);
-    color: var(--color-claro);
+    color: var(--color-texto);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -92,7 +92,7 @@
   }
   
   form input[type="submit"]:hover {
-    background-color: #357ABD;
+    background-color: #bd3535;
   }
   
   table {
@@ -109,6 +109,6 @@
   }
   
   table th {
-    background-color: #f0f0f0;
+    background-color: #000000;
   }
   
