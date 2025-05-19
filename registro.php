@@ -14,7 +14,7 @@
   <nav>
     <a href="index.html">Inicio</a>
     <a href="registro.php">Registrar Libro</a>
-    <a href="consulta.html">Consultar Libros</a>
+    <a href="consulta.php">Consultar Libros</a>
   </nav>
 
   <section>
@@ -35,7 +35,13 @@
         if (empty($titulo) || empty($autor) || empty($anio) || empty($genero)) {
             $error = "Error: Todos los campos son obligatorios.";
         } else {
-            // Si todo está bien, mostramos un mensaje de confirmación
+            // Guardar en archivo CSV
+            $linea = "\"$titulo\",\"$autor\",\"$anio\",\"$genero\"\n";
+            $archivo = fopen("libros.csv", "a");
+            fwrite($archivo, $linea);
+            fclose($archivo);
+
+            // Mensaje de confirmación
             $mensaje = "Libro '$titulo' registrado exitosamente con autor $autor, publicado en $anio, género: $genero.";
         }
     }
