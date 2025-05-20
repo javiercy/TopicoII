@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,10 +18,13 @@
     <h1>Consulta de Libros Registrados</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
+ <nav>
+    <a href="index.php">Inicio</a>
     <a href="registro.php">Registrar Libro</a>
     <a href="consulta.php">Consultar Libros</a>
+    <?php if (isset($_SESSION['usuario'])): ?>
+      <a href="panel.php">Panel</a>
+    <?php endif; ?>
   </nav>
 
   <section>
@@ -26,6 +36,7 @@
           <th>Autor</th>
           <th>Año</th>
           <th>Género</th>
+          <th>Portada</th>
         </tr>
       </thead>
       <tbody>
@@ -45,12 +56,18 @@
                 echo "<td>" . htmlspecialchars($datos[1]) . "</td>";
                 echo "<td>" . htmlspecialchars($datos[2]) . "</td>";
                 echo "<td>" . htmlspecialchars($datos[3]) . "</td>";
+                // Mostrar imagen si existe la ruta
+                if (isset($datos[4]) && file_exists($datos[4])) {
+                    echo "<td><img src='" . htmlspecialchars($datos[4]) . "' alt='Portada' style='max-width:80px;max-height:100px;'></td>";
+                } else {
+                    echo "<td>Sin imagen</td>";
+                }
                 echo "</tr>";
                 $id++;
             }
             fclose($fp);
         } else {
-            echo '<tr><td colspan="5">No hay libros registrados.</td></tr>';
+            echo '<tr><td colspan="6">No hay libros registrados.</td></tr>';
         }
         ?>
       </tbody>

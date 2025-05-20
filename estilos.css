@@ -1,114 +1,125 @@
 /* estilos.css */
 
 :root {
-    --color-principal: #df0000;
-    --color-fondo: #000000;
-    --color-texto: #fcfcfc;
-    --color-claro: #5a5a5a;
-    --color-sombra: rgba(0, 0, 0, 0.05);
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    padding: 20px;
-  }
-  
-  header {
-    background-color: var(--color-principal);
-    color: var(--color-texto);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px var(--color-sombra);
-    margin-bottom: 20px;
-  }
-  
-  nav {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--color-principal);
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  nav a:hover {
-    background-color: var(--color-principal);
-    color: white;
-  }
-  
-  section {
-    background-color: var(--color-claro);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px var(--color-sombra);
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #888;
-  }
-  
-  form label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-  }
-  
-  form input[type="text"],
-  form input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  form input[type="submit"] {
-    background-color: var(--color-principal);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s;
-  }
-  
-  form input[type="submit"]:hover {
-    background-color: #bd3535;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-  }
-  
-  table th,
-  table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  table th {
-    background-color: #000000;
-  }
-  
+  --color-principal: #df0000;
+  --color-fondo: #000000;
+  --color-texto: #fcfcfc;
+  --color-claro: #5a5a5a;
+  --color-sombra: rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 20px;
+}
+
+header {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px var(--color-sombra);
+  margin-bottom: 20px;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--color-principal);
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+section {
+  background-color: var(--color-claro);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--color-sombra);
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+form input[type="submit"] {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #bd3535;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #000000;
+}
